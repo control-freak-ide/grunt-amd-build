@@ -136,6 +136,9 @@ module.exports = (function () {
 		},
 
 		build: function (config) {
+			if(!config){
+				config = {};
+			}
 			// Already normalized
 			if (config._normalized) {
 				return config;
