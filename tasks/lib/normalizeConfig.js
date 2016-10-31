@@ -72,6 +72,10 @@ module.exports = (function () {
 
 	return {
 		loader: function (config) {
+			if(!config){
+				//throw new Error('have no config');
+				config = {};
+			}
 			// Already normalized
 			if (config._normalized) {
 				return config;
